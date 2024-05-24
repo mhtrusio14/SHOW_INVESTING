@@ -2,7 +2,7 @@ name: run Prices.py
 
 on:
   schedule:
-    - cron: '0 13 * * *' # Runs everyday at 9am EST
+    - cron: '0 21 * * *' # Runs everyday at 5pm EST
 jobs:
   build:
     runs-on: ubuntu-latest
