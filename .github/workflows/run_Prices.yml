@@ -2,7 +2,7 @@ name: run Prices.py
 
 on:
   schedule:
-    - cron: '*/5 * * * *' #runs every 5 mins
+    - cron: '0 13 * * *' # Runs everyday at 9am EST
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,4 +24,4 @@ jobs:
       - name: execute py script # run main.py
         env:
           CREDS: ${{ secrets.CREDS }}
-        run: python main.py
+        run: python Prices.py
