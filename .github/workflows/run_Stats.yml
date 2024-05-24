@@ -2,7 +2,7 @@ name: run Stats.py
 
 on:
   schedule:
-    - cron: '0 4 * * *' #runs every 5 mins
+    - cron: '0 4 * * *' # Runs everyday at 12am EST
 jobs:
   build:
     runs-on: ubuntu-latest
