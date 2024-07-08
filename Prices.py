@@ -40,7 +40,7 @@ while True:
     
     # print(api_json['listings'])
     for listing in api_json['listings']:
-        if listing['item']['series'] == "Live" and listing['item']['display_position'] == "SP" or listing['item']['display_position'] == "RP" and listing['item']['series'] == "Live":
+        if listing['item']['series'] == "Live" and listing['item']['display_position'] == "SP" or listing['item']['display_position'] == "RP" and listing['item']['series'] == "Live" or listing['item']['display_position'] == "CP" and listing['item']['series'] == "Live":
             cards_info.append({
                 'NAME': listing['item']['name'],
                 'UUID': listing['item']['uuid'],
