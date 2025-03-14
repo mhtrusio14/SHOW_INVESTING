@@ -15,7 +15,7 @@ CREDS = json.loads(creds_json)
 client = gspread.service_account_from_dict(CREDS)
 
 # Open the spreadsheet
-spreadsheet = client.open("MLB Investing")
+spreadsheet = client.open("MLB The Show 25 Investing")
 
 # Get the Players sheet
 players_sheet = spreadsheet.worksheet("Players")
@@ -59,7 +59,7 @@ for player in player_data:
     player_name = player['NAME']
     espn_id = player['ESPN_ID']
 
-    url = f"{base_url}/{espn_id}/splits?region=us&lang=en&contentorigin=espn&season=2024&category=pitching"
+    url = f"{base_url}/{espn_id}/splits?region=us&lang=en&contentorigin=espn&season=2025&category=pitching"
     api_call = requests.get(url)
     if api_call.status_code == 200:
         api_json = api_call.json()
